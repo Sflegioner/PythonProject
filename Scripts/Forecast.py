@@ -10,7 +10,9 @@ class CityForecast(unittest.TestCase):
         self.date = localDate
     def __str__(self) -> str:
         return "So today weather is {} in {} ({})".format(self.city,self.weather,self.date)
+    
+forecast = RequestsData.Formator()
+print('\n',forecast.cityname,forecast.take_days_forecast())
 
-City = CityForecast(cityName = RequestsData.cityname,weatherType=RequestsData.weather,localDate=RequestsData.localtime)
-print(City)
+
 
